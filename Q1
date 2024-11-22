@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int valor1, valor2;
+
+    
+    printf("Digite o primeiro valor: ");
+    scanf("%d", &valor1);
+
+    do {
+        printf("Digite o segundo valor (não pode ser zero): ");
+        scanf("%d", &valor2);
+        
+        if (valor2 == 0) {
+            printf("VALOR INVÁLIDO. O segundo valor não pode ser zero.\n");
+        }
+    } while (valor2 == 0);
+
+    printf("Resultado da divisão: %.2f\n", (float)valor1 / valor2);
+
+    return 0;
+}
